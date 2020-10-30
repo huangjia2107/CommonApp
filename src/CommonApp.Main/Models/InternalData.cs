@@ -6,6 +6,6 @@ namespace CommonApp.Main.Models
 {
     public class InternalData
     {
-        public List<IExtensionModel> ExtensionModels { get; set; }
+        public IExtensionModel[] ExtensionModels { get; set; }
     }
 }

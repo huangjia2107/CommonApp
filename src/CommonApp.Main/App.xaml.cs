@@ -6,6 +6,7 @@ using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Modularity;
 using Prism.Regions;
+using Prism.Events;
 
 using CommonApp.Main.Views;
 using CommonApp.Main.ViewModels;
@@ -14,6 +15,7 @@ using CommonApp.Main.Dialogs;
 using CommonApp.Main.Regions;
 using CommonApp.Service;
 using CommonApp.Service.Interfaces;
+using CommonApp.Service.Events;
 
 namespace CommonApp.Main
 {
@@ -69,10 +71,18 @@ namespace CommonApp.Main
             var _regionManager = Container.Resolve<IRegionManager>();
             _regionManager?.RegisterViewWithRegion(RegionNames.WorkName, typeof(BuiltinControl));
 
-            var appData = Container.Resolve<AppData>();
+            //Load Extensions
             var extensionModels = Container.Resolve<IExtensionModel[]>();
-
-
+            if (extensionModels != null && extensionModels.Length > 0)
+            {
+                //Save Extensions
+                var appData = Container.Resolve<AppData>();
+                appData.InternalData.ExtensionModels = extensionModels;
+            }
+                
+            //Sync Extensions
+            var eventAggregator = Container.Resolve<IEventAggregator>();
+            eventAggregator?.GetEvent<RefreshExtensionEvent>().Publish();
         }
     }
 }
