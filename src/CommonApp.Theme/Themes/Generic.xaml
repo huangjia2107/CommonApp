@@ -1,0 +1,21 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:CommonApp.Theme">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/CommonApp.Theme;component/Styles/ButtonStyle.xaml"/>
+        <ResourceDictionary Source="/CommonApp.Theme;component/Styles/RadioButtonStyle.xaml"/>
+        
+        <ResourceDictionary Source="/CommonApp.Theme;component/Styles/ScrollViewerStyle.xaml"/>
+        
+        <ResourceDictionary Source="/CommonApp.Theme;component/Styles/StatusToggleStyle.xaml"/>
+
+        <ResourceDictionary Source="/CommonApp.Theme;component/Styles/TextBoxStyle.xaml"/>
+        <ResourceDictionary Source="/CommonApp.Theme;component/Styles/NumericBoxStyle.xaml"/>
+        <ResourceDictionary Source="/CommonApp.Theme;component/Styles/RestrictTextBoxStyle.xaml"/>
+        
+        <ResourceDictionary Source="/CommonApp.Theme;component/Styles/UserWindowStyle.xaml"/>
+        
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

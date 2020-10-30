@@ -1,0 +1,10 @@
+﻿<controls:UserWindow x:Class="CommonApp.Main.Dialogs.DialogWindow"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:themes="clr-namespace:CommonApp.Theme;assembly=CommonApp.Theme"
+                     xmlns:controls="clr-namespace:CommonApp.Theme.Controls;assembly=CommonApp.Theme"
+                     xmlns:prism="http://prismlibrary.com/"
+                     Style="{StaticResource {x:Static themes:ResourceKeys.NormalUserWindowStyleKey}}"
+                     SizeToContent="WidthAndHeight" ResizeMode="NoResize" ShowInTaskbar="False" IsCloseCanceled="True"
+                     prism:Dialog.WindowStartupLocation="CenterScreen"
+                     Title="Message" Background="White" MinWidth="350" CaptionFontSize="13" CaptionHeight="27"/>

@@ -1,0 +1,28 @@
+﻿<controls:UserWindow x:Class="CommonApp.Main.Views.MainWindow"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:prism="http://prismlibrary.com/"
+                     xmlns:controls="clr-namespace:CommonApp.Theme.Controls;assembly=CommonApp.Theme"
+                     xmlns:themes="clr-namespace:CommonApp.Theme;assembly=CommonApp.Theme"
+                     xmlns:services="clr-namespace:CommonApp.Service;assembly=CommonApp.Service"
+                     xmlns:views="clr-namespace:CommonApp.Main.Views"
+                     prism:ViewModelLocator.AutoWireViewModel="True"
+                     Style="{StaticResource {x:Static themes:ResourceKeys.NormalUserWindowStyleKey}}"
+                     Title="{Binding Title}" CaptionFontSize="12" CaptionBackground="White"
+                     WindowStartupLocation="CenterScreen" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <views:SidebarControl Width="50" Background="#FF2C2C2C"/>
+            <Grid Grid.Column="1" prism:RegionManager.RegionName="{x:Static services:RegionNames.WorkName}"/>
+        </Grid>
+        <views:StatusControl Grid.Row="1" Height="25"/>
+    </Grid>
+</controls:UserWindow>

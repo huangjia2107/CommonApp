@@ -1,0 +1,8 @@
+<Project>
+    <PropertyGroup>
+      <TargetFrameworks>netcoreapp3.1;net48</TargetFrameworks>
+      <Version>0.0.1</Version>
+      <FileVersion>0.0.1</FileVersion>
+      <Copyright>Copyright © 2020</Copyright>
+    </PropertyGroup> 
+</Project>
