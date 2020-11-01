@@ -1,9 +1,9 @@
-﻿<UserControl x:Class="CommonApp.Main.Views.BuiltinControl"
+﻿<UserControl x:Class="CommonApp.Main.Views.ZeroControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <Grid>
-        <TextBlock Text="Monitor"/>
+        <TextBlock Text="Zero"/>
     </Grid>
 </UserControl>

@@ -18,9 +18,9 @@ namespace CommonApp.Main.Views
     /// <summary>
     /// DataMonitorControl.xaml 的交互逻辑
     /// </summary>
-    public partial class BuiltinControl : UserControl
+    public partial class ZeroControl : UserControl
     {
-        public BuiltinControl()
+        public ZeroControl()
         {
             InitializeComponent();
         }

@@ -2,7 +2,7 @@
 
 namespace CommonApp.Main.ViewModels
 {
-    public class BuiltinViewModel : BindableBase
+    public class ZeroViewModel : BindableBase
     {
          
     }

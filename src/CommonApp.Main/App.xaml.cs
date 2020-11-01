@@ -31,7 +31,7 @@ namespace CommonApp.Main
             ViewModelLocationProvider.Register<MainWindow, MainViewModel>();
             ViewModelLocationProvider.Register<SidebarControl, SidebarViewModel>();
             ViewModelLocationProvider.Register<StatusControl, StatusViewModel>();
-            ViewModelLocationProvider.Register<BuiltinControl, BuiltinViewModel>();
+            ViewModelLocationProvider.Register<ZeroControl, ZeroViewModel>();
             ViewModelLocationProvider.Register<MessageDialog, MessageDialogViewModel>();
         }
 
@@ -69,7 +69,7 @@ namespace CommonApp.Main
             base.OnInitialized();
 
             var _regionManager = Container.Resolve<IRegionManager>();
-            _regionManager?.RegisterViewWithRegion(RegionNames.WorkName, typeof(BuiltinControl));
+            _regionManager?.RegisterViewWithRegion(RegionNames.WorkName, typeof(ZeroControl));
 
             //Load Extensions
             var extensionModels = Container.Resolve<IExtensionModel[]>();
